@@ -25,17 +25,27 @@
     {
       nixosConfigurations."dell" = nixpkgs.lib.nixosSystem {
         modules = [
+          ./common/bash.nix
+          ./common/gaming.nix
+          ./common/network.nix
           ./common/packages.nix
+          ./common/system.nix
+          ./common/users.nix
           ./specific/dell/hardware-configuration.nix
-          ./specific/dell/thinkpad-specific.nix
+          ./specific/dell/dell.nix
         ];
         specialArgs = { inherit pkgs-unstable;};
       };
       nixosConfigurations."thinkpad" = nixpkgs.lib.nixosSystem {
         modules = [
+          ./common/bash.nix
+          ./common/gaming.nix
+          ./common/network.nix
           ./common/packages.nix
+          ./common/system.nix
+          ./common/users.nix
           ./specific/thinkpad/hardware-configuration.nix
-          ./specific/thinkpad/thinkpad-specific.nix
+          ./specific/thinkpad/thinkpad.nix
         ];
       };
       homeConfigurations."pw" = home-manager.lib.homeManagerConfiguration {
