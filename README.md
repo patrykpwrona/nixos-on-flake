@@ -9,6 +9,7 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
   * `apt update` = `nix flake update .`
   * `apt upgrade` = `sudo nixos-rebuild switch --flake ./#dell`
   * `apt install x` = add x to definition in nix file and `sudo nixos-rebuild switch --flake ./#dell`
+  * temporary `apt install x` = `nix-shell -p x`
 * If I want to use the same configuration on multiple computers I will have exactly the same packages version on each of them (defined in `flake.lock` file).
 * I have channel declared in files - no need to use `nix-channel` command.
 
