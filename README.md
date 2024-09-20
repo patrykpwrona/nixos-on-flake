@@ -10,6 +10,7 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
   * `apt upgrade` = `sudo nixos-rebuild switch --flake ./#dell`
   * `apt install x` = add x to definition in nix file and `sudo nixos-rebuild switch --flake ./#dell`
 * If I want to use the same configuration on multiple computers I will have exactly the same packages version on each of them (defined in `flake.lock` file)
+* I have channel declared in files - no need to use `nix-channel` command.
 
 ## Why home-manager?
 * Actually, there is no point of it in my use case.
@@ -17,17 +18,32 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
 * It make sense if you want to share home config with other operating systems, where home-manager can be installed (macOS, other GNU/Linux distributions).
 
 ## What it can?
-* Both NixOS and home-manager config in a single flake.
-  * [Done here](./flake.nix)
+* [Both NixOS and home-manager config in a single flake.](./flake.nix)
 * Install all packages from stable but some from unstable channel.
   * [Declare both stable and unstable as inputs](./flake.nix#L5-L6)
   * [Pass them to flake](./flake.nix#L13-L24)
   * [Also special arg](./flake.nix#L32)
   * [Read them as a parameter](./common/packages.nix#L1)
   * [Install from unstable](./common/packages.nix#L60)
-* Sudo configuration.
-  * [Done here](./common/users.nix#L11-L19)
+* [Sudo configuration.](./common/users.nix#L11-L19)
+* [Bash configuration - aliases, history, functions](./common/bash.nix)
 * Various fixes which I found on the way.
 
 ## Installation manual
-* Install NixOS using livecd installer (I used graphical installer).
+* Install NixOS using live usb installer (I used graphical installer)
+* Reboot
+* Edit files from this repo
+  * host names
+  * user name
+  * all other things you need to change
+* Copy generated `/etc/nixos/hardware-configuration.nix` into `nixos-on-flake/specific/$HOST_NAME/hardware-configuration.nix`
+* Do things from `Update system` section below
+
+## Usage manual
+### Update system
+```bash
+cd nixos-on-flake/
+nix flake update .
+sudo nixos-rebuild switch --flake ./#dell
+home-manager switch --flake ./#pw
+```

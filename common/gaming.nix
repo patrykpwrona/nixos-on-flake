@@ -18,7 +18,7 @@
   #  enable32Bit = true;
   #};
 
-  ## Borderlands 1
+  ## Borderlands GOTY (Game Of The Year Edition) - on Steam
   # Borderlands 1 requires physxcudart_20.dll file in ~/.local/share/Steam/steamapps/common/Borderlands/Binaries/ or ~/.local/share/Steam/steamapps/common/Borderlands/Prerequisites/
   # I downloaded from here https://www.dll-files.com/download/ee21928c80012525513d4d942248ca79/physxcudart_20.dll.html?c=VTh0SFk4cmoxQnRUWXZUWktPeG9lUT09
   # Working on Proton-9.0.1 (steam embeded) - only this version tested
