@@ -6,7 +6,7 @@
   ## Packages installed as user
   users.users.pw.packages = with pkgs; [
     ### GNOME apps
-    # On ustable channel delete 'gnome.' prefix
+    # On unstable channel delete 'gnome.' prefix
     gnome.gnome-terminal # another terminal app as a backup
     gnome.gnome-keyring # for ssh
     gnome.gnome-tweaks # for setting Caps Lock as additional Ctrl (Tweaks -> Keyboard -> Additional layout Options -> Caps Lock behavior)
