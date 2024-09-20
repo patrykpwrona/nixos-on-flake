@@ -59,6 +59,9 @@
     
     pkgs-unstable.immich-cli # immich cli - version from stable is very old, and not working         
 
+    ansible
+    ansible-lint # for vscode ansible extension
+
   ];
 
   ## Packages installed as root (system-wide)
