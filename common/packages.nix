@@ -95,7 +95,8 @@
   ];
 
   ## Programs managed by NixOS
-  programs.mtr.enable = true;
+  programs.mtr.enable = true; # mtr
+  programs.ssh.startAgent = true; # remember passwords for encrypted ssh private keys
 
   ## Flatpak
   # flatpak install net.xmind.XMindG # mind map tool
@@ -111,6 +112,7 @@
   ];
   
   ## Fix for:
+  ### Image file properties not showing in file explorer
   ### Your GStreamer installation is missing a plug-in.
   environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" (with pkgs.gst_all_1; [
   gst-plugins-good
