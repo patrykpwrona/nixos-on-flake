@@ -17,7 +17,7 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
 * Actually, there is no point of it in my use case.
   * I have a plan to get rid of it and move everything into NixOS configuration.
 * It make sense if you want to share home config with other operating systems, where home-manager can be installed (macOS, other GNU/Linux distributions).
-* In home-manager you can have more thins in Nix syntax, so you can probably use variables and other things in more convenient way.
+* In home-manager you can have more things in Nix syntax, so you can probably use variables and other stuff in more convenient way.
 
 ## What it can?
 * [Both NixOS and home-manager config in a single flake](./flake.nix)
