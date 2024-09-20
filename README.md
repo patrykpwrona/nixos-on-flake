@@ -28,11 +28,18 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
   * [Read them as a parameter](./common/packages.nix#L1)
   * [Install from unstable](./common/packages.nix#L60)
 * [Sudo configuration](./common/users.nix#L11-L19)
-* [Bash configuration - aliases, history, functions](./common/bash.nix)
+* [Bash configuration - aliases, history size, functions](./common/bash.nix)
+* [Edit /etc/hosts file](./common/network.nix#L12-L17)
+* [Open ports in firewall](./common/network.nix#L19-L24)
+* [Install python modules](./common/packages.nix#L24-L26)
 * [Install Steam](./common/gaming.nix)
 * [Global git config using home-manager](./common/home.nix#L22-L31)
 * [Install VS Code plugins using NixOS configuration](./common/packages.nix#L28-L42)
 * [Install VS Code plugins and configure VS Code using home-manager (settings, key bindings)](./common/home.nix#L82-L130)
+* [Do not install all GNOME default junk apps](./common/packages.nix#L4)
+* [Install Tailscale VPN with accept routes option](./common/network.nix#L26-L31)
+* [FIX: Your GStreamer installation is missing a plug-in.](./common/packages.nix#L114-L122)
+* [Wezterm terminal configuration: keyboard shortcuts, auto switch light/dark theme](./common/home.nix#L33-L80)
 * Various fixes and tricks which I found on the way
 
 ## Installation manual

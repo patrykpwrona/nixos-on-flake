@@ -79,7 +79,7 @@ return config
     '';
   };
 
-  ## VS Code
+  ## VS Code - probably most of it can be done with config.json file
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
