@@ -25,4 +25,6 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
   * [Also special arg](./flake.nix#L32)
   * [Read them as a paremeter](./common/packages.nix#L1)
   * [Install from unstable](./common/packages.nix#L60)
+* Sudo configuration.
+  * [Done here](./common/users.nix#L11-19)
 * Various fixes which I found on the way.
