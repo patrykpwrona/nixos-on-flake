@@ -21,7 +21,7 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
   * [Done here](./flake.nix)
 * Install all packages from stable but some from unstable channel.
   * [Declare both stable and unstable as input](./flake.nix#L5-L6)
-  * [Pass them to flake](./flake.nix#L13-L24)
+  * [Pass them to flake](./flake.nix#L13-L24,L32)
   * [Read them as a paremeter](./common/packages.nix#L1)
   * [Install from unstable](./common/packages.nix#L60)
 * Various fixes which I found on the way.
