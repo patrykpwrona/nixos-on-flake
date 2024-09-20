@@ -16,16 +16,16 @@
     ### GNOME extensions
     # To enable gnome extensions: log out and login, open "Extension" app and enable
     gnomeExtensions.appindicator # needed for tray icons to work (e.g for nextcloud)     
-    gnomeExtensions.tophat # system usage status
+    gnomeExtensions.tophat # system usage status widget
     libgtop # for tophat
-    gnomeExtensions.vitals # system usage status
+    gnomeExtensions.vitals # another system usage status widget
     gnomeExtensions.hibernate-status-button # hibernate button
 
     ### Python modules and apps
     (python311.withPackages(py-packages: with py-packages; [ pyftpdlib ]))
     # python3 -m pyftpdlib
 
-    ### Vscode with extensions - moved to home-manager now, but this is working
+    ### Vscode with extensions - moved to home-manager now, but this is working also
     #(vscode-with-extensions.override {
     #  vscodeExtensions = with vscode-extensions; [
     #    pkief.material-icon-theme        
@@ -92,7 +92,7 @@
     fatrace # show processes which do something on disk
   ];
 
-  ## Programs
+  ## Programs managed by NixOS
   programs.mtr.enable = true;
 
   ## Flatpak
@@ -109,7 +109,7 @@
   ];
   
   ## Fix for:
-  ## Your GStreamer installation is missing a plug-in.
+  ### Your GStreamer installation is missing a plug-in.
   environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" (with pkgs.gst_all_1; [
   gst-plugins-good
   gst-plugins-bad
