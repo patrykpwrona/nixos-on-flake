@@ -77,16 +77,15 @@
     du-dust # dust - du alternative
     ripgrep # rg - grep alternative
     fd # find alternative
-    tldr
+    tldr # short version of man
     unzip
-    jq
-    fping
+    jq # JSON parser
+    fping # ping whole subnet
     htop
     dig
     pwgen
-    lm_sensors
-    testdisk
-    smartmontools
+    lm_sensors # commands: sensors, sensors-detect
+    smartmontools # read SMART from disks
     ethtool
     nvme-cli # nvme
     gptfdisk # gdisk
