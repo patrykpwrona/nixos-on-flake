@@ -20,11 +20,14 @@ DISCLAIMER: It's not my live configuration repo, but I put here things which can
 * Both NixOS and home-manager config in a single flake.
   * [Done here](./flake.nix)
 * Install all packages from stable but some from unstable channel.
-  * [Declare both stable and unstable as input](./flake.nix#L5-L6)
+  * [Declare both stable and unstable as inputs](./flake.nix#L5-L6)
   * [Pass them to flake](./flake.nix#L13-L24)
   * [Also special arg](./flake.nix#L32)
-  * [Read them as a paremeter](./common/packages.nix#L1)
+  * [Read them as a parameter](./common/packages.nix#L1)
   * [Install from unstable](./common/packages.nix#L60)
 * Sudo configuration.
-  * [Done here](./common/users.nix#L11-19)
+  * [Done here](./common/users.nix#L11-L19)
 * Various fixes which I found on the way.
+
+## Installation manual
+* Install NixOS using livecd installer (I used graphical installer).

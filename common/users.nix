@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  ## User account 
+  ## Create user account 
   users.users.pw = {
     isNormalUser = true;
     description = "pw";
