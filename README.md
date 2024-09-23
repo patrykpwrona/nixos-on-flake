@@ -64,8 +64,9 @@ home-manager switch --flake ./#pw
 ### Rollback system state
 Rollback nix packages state (not user data)
 * While booting system - select previous generation from grub
-* While system is running
+* While system is running - using the fact that configuration is in version control
 ```bash
-nixos-rebuild list-generations
-
+cd nixos-on-flake/
+git checkout $COMMIT_THAT_WORKED
+sudo nixos-rebuild switch --flake ./#dell
 ```
