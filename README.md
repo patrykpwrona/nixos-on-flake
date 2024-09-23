@@ -61,3 +61,11 @@ nix flake update .
 sudo nixos-rebuild switch --flake ./#dell
 home-manager switch --flake ./#pw
 ```
+### Rollback system state
+Rollback nix packages state (not user data)
+* While booting system - select previous generation from grub
+* While system is running
+```bash
+nixos-rebuild list-generations
+
+```
